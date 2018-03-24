@@ -24,7 +24,7 @@ export default class IndecisionApp extends React.Component {
 
     handleModal = () => {
         this.setState(() => ({selectedOption: undefined}));
-    }
+    };
 
     handleDeleteOption = (optionToRemove) => {
         this.setState((prevState) => ({
