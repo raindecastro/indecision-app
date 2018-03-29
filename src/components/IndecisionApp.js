@@ -71,20 +71,25 @@ export default class IndecisionApp extends React.Component {
         const subtitle = "This is Kyle's personal app";
  
         return (
-            <div style={form}>
+            <div>
                 <Header subtitle={subtitle} />
-                <Action 
-                    hasOptions={this.state.options.length > 0} 
-                    handlePick={this.handlePick}
-                />
-                <Options
-                    options={this.state.options}
-                    handleDeleteOptions={this.handleDeleteOptions}
-                    handleDeleteOption={this.handleDeleteOption}
-                />
-                <AddOption
-                    handleAddOption={this.handleAddOption}
-                />
+                <div className="container">
+                    <Action 
+                        hasOptions={this.state.options.length > 0} 
+                        handlePick={this.handlePick}
+                    />
+                    <div className="widget">
+                        <Options
+                        options={this.state.options}
+                        handleDeleteOptions={this.handleDeleteOptions}
+                        handleDeleteOption={this.handleDeleteOption}
+                        />
+                    <AddOption
+                        handleAddOption={this.handleAddOption}
+                        />
+                    </div>
+                    
+                </div>
                 <OptionModal 
                     selectedOption={this.state.selectedOption}
                     handleModal={this.handleModal}
@@ -93,13 +98,3 @@ export default class IndecisionApp extends React.Component {
         );
     }
 }
-
-const form = {
-    fontFamily: "Roboto, Helvetica, Arial, sans-serif",
-    width: '100%',
-    maxWidth: '400px',
-    background: '#F9F9F9',
-    padding: '25px',
-    margin: '150px auto',
-    boxShadow: '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)'
-};

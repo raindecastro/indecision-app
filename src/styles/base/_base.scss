@@ -1,0 +1,17 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $faded-violet;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 1.6rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
