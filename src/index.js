@@ -4,7 +4,7 @@ import IndecisionApp from './components/IndecisionApp';
 import 'normalize.css/normalize.css';
 import './styles/style.scss';
 
-console.log("This is test for VSCode Commit");
+console.log("Rain de Castro, Mapua University");
 
 ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
 
